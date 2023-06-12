@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Button from './Components/ui/Button/Button'
 
 function App() {
+  const [counter,setcounter] = useState(0) 
+  console.log('rendu')
   return (
     <div className="App">
-      <Button className="primary" onclick={()=> {console.log('fonction envoyée par le parent')}}><img src='/img/ok_icon.png' alt=''/>ok</Button>
-      <Button className="error">cancel</Button>
+      Voici la valeur de couter :{counter}
+      <hr/>
+      <Button className="error" onclick={()=>{
+        setcounter(counter -1)
+        console.log(counter)
+      }}>-1</Button>
+      <Button onclick={()=>{
+        setcounter(counter +1)
+        console.log(counter)
+      }}> +1
+      </Button>
     </div>
   );
 }
