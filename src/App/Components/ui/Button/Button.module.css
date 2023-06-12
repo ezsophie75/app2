@@ -14,7 +14,10 @@
 .Button:hover{
     box-shadow: 10px 10px;
 }
-
+.clicked{
+    box-shadow:5px 5px 25px grey !important;
+    border:1px solid black !important
+}
 .Button img{
     max-width: 32px;
     height: 32px;
