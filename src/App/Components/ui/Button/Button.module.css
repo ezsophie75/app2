@@ -12,5 +12,10 @@
     margin-right:10px;
 }
 .Button:hover{
-    box-shadow: 10px 10px
+    box-shadow: 10px 10px;
+}
+
+.Button img{
+    max-width: 32px;
+    height: 32px;
 }
