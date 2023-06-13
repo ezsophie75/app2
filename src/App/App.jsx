@@ -25,6 +25,7 @@ function App() {
         console.log(counter)
       }}> +1
       </Button>
+      
     </div>
   );
 }
