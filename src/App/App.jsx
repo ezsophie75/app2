@@ -33,7 +33,8 @@ const App = () => {
             })}
             basePath=''>
           </MemeSVGViewer>
-          <MemeForm onMemeChange={(meme)=>{
+          <MemeForm 
+          onMemeChange={(meme)=>{
             setState({...state,current:meme})
           }}
           images={datas.images} 

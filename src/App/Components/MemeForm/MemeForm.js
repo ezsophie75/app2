@@ -3,26 +3,11 @@ import PropTypes from 'prop-types';
 import style from './MemeForm.module.css';
 import { emptyMeme } from 'orsys-tjs-meme';
 import Button from '../ui/Button/Button';
-export const initialStateMemeForm = emptyMeme
 const MemeForm = (props) => {
-  const [state, setstate] = useState(initialStateMemeForm)
-  useEffect(() => {
-    //cmp didmount
-    console.log(`composant MemeForm monté`);
-    return () => {
-      //cleanup
-      console.log(`composant MemeForm demonté`);
-    };
-    
-  }, [])
-  useEffect(() => {
-    setstate(props.current)
-  }, [props])
   return (
     <div className={style.MemeForm} data-testid="MemeForm">
       <form onSubmit={(evt) => {
         evt.preventDefault();
-        props.onMemeChange(state);
       }} onReset={(evt) => {
         props.onMemeChange(emptyMeme);
       }}>
@@ -30,9 +15,9 @@ const MemeForm = (props) => {
           <h1>Titre</h1></label>
         <br />
         <input name="titre" id="titre"
-          value={state.titre}
+          value={props.current.titre}
           onChange={(evt) => {
-            setstate({ ...state, titre: evt.target.value })
+            props.onMemeChange({ ...props.current, titre: evt.target.value })
           }} />
         <hr />
         <label htmlFor="image">
@@ -40,9 +25,9 @@ const MemeForm = (props) => {
         </label>
         <br />
         <select name="image" id="image"
-          value={state.imageId}
+          value={props.current.imageId}
           onChange={(evt) => {
-            setstate({ ...state, imageId: Number(evt.target.value) })
+            props.onMemeChange({ ...props.current, imageId: Number(evt.target.value) })
           }}
         >
           <option value="-1">No image</option>
@@ -57,9 +42,9 @@ const MemeForm = (props) => {
         </label>
         <br />
         <input name="text" id="text" type="text"
-          value={state.text}
+          value={props.current.text}
           onChange={(evt) => {
-            setstate({ ...state, text: evt.target.value })
+            props.onMemeChange({ ...props.current, text: evt.target.value })
           }}
         />
         <br />
@@ -67,18 +52,18 @@ const MemeForm = (props) => {
           <h2 className={style.smallNumber}>x :</h2>
         </label>
         <input className={style.smallNumber} name="x" id="x" type="number"
-          value={state.x}
+          value={props.current.x}
           onChange={(evt) => {
-            setstate({ ...state, x: Number(evt.target.value) })
+            props.onMemeChange({ ...props.current, x: Number(evt.target.value) })
           }}
         />
         <label htmlFor="y">
           <h2 className={style.smallNumber}>y :</h2>
         </label>
         <input className={style.smallNumber} name="y" id="y" type="number"
-          value={state.y}
+          value={props.current.y}
           onChange={(evt) => {
-            setstate({ ...state, y: Number(evt.target.value) })
+            props.onMemeChange({ ...props.current, y: Number(evt.target.value) })
           }}
         />
         <hr />
@@ -88,9 +73,9 @@ const MemeForm = (props) => {
           <h2 className={style.smallNumber}>color :</h2>
         </label>
         <input name="color" id="color" type="color"
-          value={state.color}
+          value={props.current.color}
           onChange={(evt) => {
-            setstate({ ...state, color: evt.target.value })
+            props.onMemeChange({ ...props.current, color: evt.target.value })
           }}
         />
         <br />
@@ -98,25 +83,25 @@ const MemeForm = (props) => {
           <h2 className={style.smallNumber}>font-size :</h2>
         </label>
         <input className={style.smallNumber} name="fontSize" id="fontSize" type="number" min="0"
-          value={state.fontSize}
+          value={props.current.fontSize}
           onChange={(evt) => {
-            setstate({ ...state, fontSize: Number(evt.target.value) })
+            props.onMemeChange({ ...props.current, fontSize: Number(evt.target.value) })
           }}
         />px<br />
         <label htmlFor="fontWeight">
           <h2 className={style.smallNumber}>font-weight :</h2>
         </label>
         <input className={style.smallNumber} name="fontWeight" id="fontWeight" type="number" min="100" step="100" max="900"
-          value={state.fontWeight}
+          value={props.current.fontWeight}
           onChange={(evt) => {
-            setstate({ ...state, fontWeight: evt.target.value })
+            props.onMemeChange({ ...props.current, fontWeight: evt.target.value })
           }}
         />
         <br />
         <input name="underine" id="underline" type="checkbox"
-          checked={state.underline}
+          checked={props.current.underline}
           onChange={(evt) => {
-            setstate({ ...state, underline: evt.target.checked })
+            props.onMemeChange({ ...props.current, underline: evt.target.checked })
           }}
         />
         &nbsp;
@@ -131,9 +116,9 @@ const MemeForm = (props) => {
         </label>
         &nbsp;
         <input name="italic" id="italic" type="checkbox"
-          checked={state.italic}
+          checked={props.current.italic}
           onChange={(evt) => {
-            setstate({ ...state, italic: evt.target.checked })
+            props.onMemeChange({ ...props.current, italic: evt.target.checked })
           }}
         />
         <hr />
