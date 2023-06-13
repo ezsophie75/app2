@@ -19,7 +19,7 @@
       "withStory": true,
       "withLazy": true,
       "customTemplate": {
-        "component":"grc/hookedFunction/TemplateName.js"
+        "component": "grc/hookedFunction/TemplateName.js"
       }
     },
     "layoutFunc": {
@@ -29,17 +29,17 @@
       "withStory": true,
       "withLazy": true,
       "customTemplate": {
-        "component":"grc/layoutFunction/TemplateName.js"
-      },
-      "uiFunc": {
-        "path": "src/App/Components/ui",
-        "withStyle": true,
-        "withTest": true,
-        "withStory": true,
-        "withLazy": true,
-        "customTemplate": {
-          "component":"grc/layoutFunction/TemplateName.js"
-        }
+        "component": "grc/layoutFunction/TemplateName.js"
+      }
+    },
+    "uiFunc": {
+      "path": "src/App/Components/ui",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true,
+      "customTemplate": {
+        "component": "grc/layoutFunction/TemplateName.js"
       }
     }
   }
