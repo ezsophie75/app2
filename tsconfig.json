@@ -23,5 +23,5 @@
   },
   "include": [
     "src"
-  ]
+, "grc/hookedFunction/TemplateName.js"  ]
 }

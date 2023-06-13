@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyTemplateName = lazy(() => import('./TemplateName'));
+const LazyTemplateName = lazy(() => import('../../../../grc/hookedFunction/TemplateName'));
 
 const TemplateName = props => (
   <Suspense fallback={null}>

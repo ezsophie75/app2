@@ -1,5 +1,5 @@
 /* eslint-disable */
-import TemplateName from './TemplateName';
+import TemplateName from '../../../../grc/hookedFunction/TemplateName';
 
 export default {
   title: "TemplateName",
