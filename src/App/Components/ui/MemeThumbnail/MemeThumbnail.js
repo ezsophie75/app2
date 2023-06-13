@@ -1,15 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './MemeThumbnail.module.css';
-
-const MemeThumbnail = () => (
-  <div className={styles.MemeThumbnail} data-testid="MemeThumbnail">
-    MemeThumbnail Component
-  </div>
-);
-
-MemeThumbnail.propTypes = {};
-
-MemeThumbnail.defaultProps = {};
-
-export default MemeThumbnail;
+import React from 'react'
+import PropTypes from 'prop-types'
+import style from './MemeThumbnail.module.css'
+const MemeThumbnail = (props) => {
+  return (
+    <div className={style.MemeThumbnail} data-testid="MemeThumbnail">
+      {props.children}
+    </div>
+  )
+}
+MemeThumbnail.propTypes = {
+  children: PropTypes.any.isRequired,
+}
+export default MemeThumbnail

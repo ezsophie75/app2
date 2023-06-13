@@ -1,15 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './NavBar.module.css';
-
-const NavBar = () => (
-  <div className={styles.NavBar} data-testid="NavBar">
-    NavBar Component
-  </div>
-);
-
-NavBar.propTypes = {};
-
-NavBar.defaultProps = {};
-
-export default NavBar;
+import React from 'react'
+import PropTypes from 'prop-types'
+import style from './NavBar.module.css'
+import { Navbar, Container, Nav } from 'react-bootstrap'  
+import '../../../../../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../../../../../node_modules/bootstrap/dist/js/bootstrap.js'
+const NavBar = (props) => {
+  return (
+    <div className={style.NavBar} data-testid="NavBar">
+       <Navbar bg="primary" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Nav className="me-auto">
+          <Nav.Link href="#home">Thumbnail</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </div>
+  )
+}
+NavBar.propTypes = {
+}
+export default NavBar

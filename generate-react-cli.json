@@ -18,7 +18,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "grc/hookedFunction/TemplateName.js"
       }
     },
@@ -28,7 +28,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "grc/layoutFunction/TemplateName.js"
       }
     },
@@ -38,7 +38,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "grc/layoutFunction/TemplateName.js"
       }
     }

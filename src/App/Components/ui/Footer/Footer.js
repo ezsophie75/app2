@@ -1,15 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Footer.module.css';
-
-const Footer = () => (
-  <div className={styles.Footer} data-testid="Footer">
-    Footer Component
-  </div>
-);
-
-Footer.propTypes = {};
-
-Footer.defaultProps = {};
-
-export default Footer;
+import React from 'react'
+import PropTypes from 'prop-types'
+import style from './Footer.module.css'
+const Footer = (props) => {
+  return (
+    <div className={style.Footer} data-testid="Footer">
+   orsys &copy; 2023
+    </div>
+  )
+}
+Footer.propTypes = {}
+export default Footer

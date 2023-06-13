@@ -1,15 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './FlexH1Grow.module.css';
-
-const FlexH1Grow = () => (
-  <div className={styles.FlexH1Grow} data-testid="FlexH1Grow">
-    FlexH1Grow Component
-  </div>
-);
-
-FlexH1Grow.propTypes = {};
-
-FlexH1Grow.defaultProps = {};
-
-export default FlexH1Grow;
+import React from 'react'
+import PropTypes from 'prop-types'
+import style from './FlexH1Grow.module.css'
+const FlexH1Grow = (props) => {
+  return (
+    <div className={style.FlexH1Grow} data-testid="FlexH1Grow">
+      {props.children}
+    </div>
+  )
+}
+FlexH1Grow.propTypes = {
+  children: PropTypes.any.isRequired,
+}
+export default FlexH1Grow
