@@ -7,6 +7,7 @@ import { MemeSVGViewer, emptyMeme } from 'orsys-tjs-meme'
 import MemeForm from './Components/MemeForm/MemeForm'
 import Footer from './Components/ui/Footer/Footer'
 import datas from './db.json'
+import store from './store/store'
 const appInitialState = {
   images: [],
   memes: [],
