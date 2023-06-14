@@ -178,6 +178,21 @@
       "frameSizeX": 0,
       "frameSizeY": 101,
       "id": 8
+    },
+    {
+      "titre": "xxxxxfgfgfgfgf",
+      "text": "",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 2,
+      "color": "#000000",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 9
     }
   ]
 }

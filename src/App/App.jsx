@@ -4,10 +4,11 @@ import Header from './Components/ui/Header/Header'
 import NavBar from './Components/ui/NavBar/NavBar'
 import FlexH1Grow from './Components/layout/FlexH1Grow/FlexH1Grow'
 import { MemeSVGViewer, emptyMeme } from 'orsys-tjs-meme'
-import MemeForm from './Components/MemeForm/MemeForm'
+import MemeForm, { MemeFormStoredConnected } from './Components/MemeForm/MemeForm'
 import Footer from './Components/ui/Footer/Footer'
 import datas from './db.json'
 import store from './store/store'
+import { MemeSvgViewer } from './Components/ui/MemeSvgViewer/MemeSvgViewer'
 const appInitialState = {
   images: [],
   memes: [],
@@ -15,10 +16,9 @@ const appInitialState = {
 }
 
 const App = () => {
-  const [state, setState] = useState(appInitialState)
+  
   useEffect(() => {
-    setState({ ...state, ...datas });
-
+//store.dispatch(fetchAllRessources())
   }, [])
   console.log(datas);
   return (
@@ -27,19 +27,9 @@ const App = () => {
         <Header />
         <NavBar></NavBar>
         <FlexH1Grow>
-          <MemeSVGViewer
-            meme={state.current}
-            image={state.images.find(img => {
-              return img.id === state.current.imageId
-            })}
-            basePath=''>
-          </MemeSVGViewer>
-          <MemeForm 
-          onMemeChange={(meme)=>{
-            setState({...state,current:meme})
-          }}
-          images={datas.images} 
-          current={state.current} ></MemeForm>
+          <MemeSvgViewer
+            basePath=''/>
+          <MemeFormStoredConnected></MemeFormStoredConnected>
         </FlexH1Grow>
         <Footer></Footer>
       </FlexV3Grow>
