@@ -1,1 +1,8 @@
-.MemeThumbnail {}
+.MemeThumbnail {
+    display:flex;
+    flex-wrap:wrap;
+}
+.MemeThumbnail>div{
+    width:30vw;
+    height:25vw;
+}
